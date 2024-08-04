@@ -7,10 +7,11 @@ function addItem() {
   const newItem = document.createElement("li");
   //   newItem.textContent = inputValue;
   newItem.className = "list-item";
-  newItem.innerHTML = `
-              ${inputValue}
-              <button onclick="deleteItem(this)"><i class="fas fa-trash"></i></button>
-              <button onclick="toggleItem(this)"><i class="fas fa-check"></i></button>
+  newItem.innerHTML = `                
+              ${inputValue}          
+               <button onclick="toggleItem(this)"><i class="fas fa-check"></i></button>
+              <button onclick="deleteItem(this)"><i class="fas fa-trash"></i></button>       
+             
            `;
   document.getElementById("inputValue").focus();
 
@@ -26,10 +27,11 @@ function toggleItem(button) {
   // Butona tıklanan liste öğesinin stilini değiştir
   const listItem = button.parentElement;
   listItem.classList.toggle("esnek");
+  
 }
 function deleteItem(button) {
   const sifre = prompt(
-    "Lütfen silme işlemi için şifre giriniz: (Demo mod için şifre:1234"
+    "Lütfen silme işlemi için şifre giriniz: (Demo mod için şifre:1234)"
   );
   if (sifre == 1234) {
     const listItem = button.parentElement;

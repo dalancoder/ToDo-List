@@ -4,37 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <title>TO DO LIST</title>
   </head>
   <body>
     <div class="container">
+      <div class="header">
+        <input id="inputValue" type="text" placeholder="Bir Görev Giriniz" />
+           <select id="selectBox">
+          <option value="box1" >ACİL OLAN ÖNEMLİ GÖREV</option>
+          <option value="box2">ACİL OLMAYAN ÖNEMLİ GÖREV</option>
+          <option value="box3">ACİL OLAN ÖNEMSİZ GÖREV</option>
+          <option value="box4">ACİL OLMAYAN ÖNEMSİZ GÖREV</option>
+       </select>
+       <button id="btn" onclick="addItem()">GÖREV EKLE</button>
+      </div>
       <div class="card-container1">
         <div class="box" id="box1">
-          <h2>ACİL ÖNEMLİ GÖREVLER <button onclick="removeItemAll('box1')">Hepsini Sil</button>
+          <h2>ACİL OLAN ÖNEMLİ GÖREVLER <button class="delete" onclick="removeItemAll('box1')"><i class="fa-solid fa-triangle-exclamation"></i><span>>Hepsini Sil</span></button>
           </h2>
+          <ol></ol>
        </div>
         <div class="box" id="box2">
-          <h2>ACİL OLMAYAN ÖNEMLİ GÖREVLER <button onclick="removeItemAll('box2')">Hepsini Sil</button></h2>
+          <h2>ACİL OLMAYAN ÖNEMLİ GÖREVLER <button class="delete" onclick="removeItemAll('box2')"><i class="fa-solid fa-triangle-exclamation"></i><span>Hepsini Sil</span></button></h2>
           <ol></ol>
         </div>
       </div>
-      <div>
-        <input id="inputValue" type="text" placeholder="Bir Görev Giriniz" />
-           <select id="selectBox">
-          <option value="box1" >ACİL ÖNEMLİ GÖREV</option>
-          <option value="box2">ACİL OLMAYAN ÖNEMLİ GÖREV</option>
-          <option value="box3">ACİL ÖNEMSİZ GÖREV</option>
-          <option value="box4">ACİL OLMAYAN ÖNEMSİZ GÖREV</option>
-       </select>
-       <button onclick="addItem()">GÖREV EKLE</button>
-      </div>
+      
       <div class="card-container2">
         <div class="box" id="box3">
-          <h2>ACİL ÖNEMSİZ GÖREVLER <button onclick="removeItemAll('box3')">Hepsini Sil</button></h2>
+          <h2>ACİL OLAN ÖNEMSİZ GÖREVLER <button class="delete" onclick="removeItemAll('box3')"><i class="fa-solid fa-triangle-exclamation"></i><span>Hepsini Sil</span></button></h2>
           <ol></ol>
         </div>
         <div class="box" id="box4">
-          <h2>ACİL OLMAYAN ÖNEMSİZ GÖREVLER <button onclick="removeItemAll('box4')">Hepsini Sil</button></h2>
+          <h2>ACİL OLMAYAN ÖNEMSİZ GÖREVLER <button class="delete" onclick="removeItemAll('box4')"><i class="fa-solid fa-triangle-exclamation"></i><span>Hepsini Sil</span></button></h2>
           <ol></ol>
         </div>
       </div>
