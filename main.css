@@ -1,10 +1,4 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css';
-/* ------------------------------------------------------ */
-/*                        Variables                       */
-/* ------------------------------------------------------ */
-/* ------------------------------------------------------ */
-/*                         Header                         */
-/* ------------------------------------------------------ */
 .container {
   width: 100%;
   height: 100vh;
@@ -46,8 +40,7 @@
   justify-content: center;
   gap: 2rem;
 }
-
 .cards {
   border: 2px solid red;
   width: 45%;
-}/*# sourceMappingURL=main.css.map */
+}
