@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   border: 2px solid blue;
+  
 }
 .container .card-container1 {
   width: 100%;
@@ -43,4 +44,8 @@
 .cards {
   border: 2px solid red;
   width: 45%;
+}
+.esnek{
+  text-decoration: line-through;
+  background-color: aqua;
 }
