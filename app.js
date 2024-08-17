@@ -1,3 +1,6 @@
+
+
+
 function addItem() {
   let inputValue = document.getElementById("inputValue").value.trim();
   const selectedDivId = document.querySelector("#selectBox").value;
@@ -21,6 +24,16 @@ function addItem() {
   ol.appendChild(newItem);
   selectedDiv.appendChild(ol);
   document.getElementById("inputValue").value = ""; // Input'u temizleme
+
+  localStorageSetGet(inputValue)
+}
+
+function localStorageSetGet(inputValue){
+  let data = JSON.parse(localStorage.getItem("myData")) || [];
+  // Yeni öğeyi ekle
+  data.push(inputValue);
+  // Güncellenmiş verileri localStorage'a kaydet
+  localStorage.setItem("myData", JSON.stringify(data));
 }
 
 function toggleItem(button) {
