@@ -13,6 +13,7 @@ function loadLocalStorage(){
 document.addEventListener("DOMContentLoaded", loadLocalStorage)
 
 
+
 function addItem() {
 
   let inputValue = document.getElementById("inputValue").value.trim();
